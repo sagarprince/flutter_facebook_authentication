@@ -6,32 +6,6 @@ import 'src/clock.dart';
 
 /// FacebookLogin is a plugin for authenticating your users using the native
 /// Android & iOS Facebook Login SDKs.
-///
-/// The login methods return a [FacebookLoginResult] that contains relevant
-/// information about whether the user logged in, cancelled the login dialog,
-/// or if the login flow resulted in an error.
-///
-/// For example, this sample code illustrates how to handle the different
-/// cases:
-///
-/// ```dart
-/// final facebookLogin = FacebookLogin();
-/// final result =
-///   await facebookLogin.logInWithPermissions(['email']);
-///
-/// switch (result.status) {
-///   case FacebookLoginStatus.loggedIn:
-///     _sendTokenToServer(result.accessToken.token);
-///     _showLoggedInUI();
-///     break;
-///   case FacebookLoginStatus.cancelledByUser:
-///     _showConvincingMessageOnUI();
-///     break;
-///   case FacebookLoginStatus.error:
-///     _showErrorOnUI();
-///     break;
-/// }
-///
 /// Before using this plugin, some initial setup is required for the Android
 /// and iOS clients. See the README for detailed instructions.
 /// ```

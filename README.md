@@ -132,7 +132,7 @@ Since sample code is worth more than one page of documentation, here are the usu
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 
 final facebookLogin = FacebookLogin();
-final result = await facebookLogin.logInWithReadPermissions(['email']);
+final result = await facebookLogin.logIn(['email']);
 
 switch (result.status) {
   case FacebookLoginStatus.loggedIn:
@@ -146,13 +146,6 @@ switch (result.status) {
     _showErrorOnUI(result.errorMessage);
     break;
 }
-```
-
-You can also change the visual appearance of the login dialog. For example:
-
-```dart
-// Let's force the users to login using the login dialog based on WebViews. Yay!
-facebookLogin.loginBehavior = FacebookLoginBehavior.webViewOnly;
 ```
 
 The complete API documentation lives with the source code, [which can be found here](https://github.com/roughike/flutter_facebook_login/blob/master/lib/flutter_facebook_login.dart).
@@ -175,10 +168,10 @@ The `profile` variable will now contain the following information:
 
 ```json
 {
-   "name": "Iiro Krankka",
-   "first_name": "Iiro",
-   "last_name": "Krankka",
-   "email": "iiro.krankka\u0040gmail.com",
+   "name": "Sagar Pansare",
+   "first_name": "Sagar",
+   "last_name": "Pansare",
+   "email": "sagar\u0040gmail.com",
    "id": "<user id here>"
 }
 ```

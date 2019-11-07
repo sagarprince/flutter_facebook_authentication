@@ -12,7 +12,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   static final FacebookLogin facebookSignIn = new FacebookLogin();
-
   String _message = 'Log in/out by pressing the buttons below.';
 
   Future<Null> _login() async {
